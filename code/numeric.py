@@ -41,3 +41,14 @@ class Num:
         pos=-1
       if pos!=-1:
         self.isSorted=False
+        
+  def div(self):
+    a=self.nums()
+    index_90th=int(len(a)*0.9)
+    index_10th=int(len(a)*0.1)
+    return (a[index_90th]-a[index_10th])/2.58
+    
+  def mid(self):
+    a=self.nums()
+    index_50th=int(len(a)*0.5)
+    return a[index_50th]
