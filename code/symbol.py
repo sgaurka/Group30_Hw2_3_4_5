@@ -36,7 +36,7 @@ class Sym:
 
 
 if __name__ == '__main__':
-    sym = Sym(c=1, s="Waol")
+    sym = Sym(c=1, s="Abcd")
 
     sym.add(v="&")
     sym.add(v="*")
