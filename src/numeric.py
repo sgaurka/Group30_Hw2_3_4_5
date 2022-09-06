@@ -26,21 +26,24 @@ class Num:
       self.isSorted=True
     return self._has
   
-  def add(self,v):
-    if v!='?':
-      self.n=self.n+1
-      self.lo=min(self.lo,v)
-      self.hi=max(self.hi,v)
-      if len(self._has)<the['nums']:
-        pos=1+len(self._has)
-        self._has.append(v)
-      elif random.random()<the['nums']/self.n:
-        pos=random.randint(0,the['nums']-1)
-        self._has[pos]=v
-      else:
-        pos=-1
-      if pos!=-1:
-        self.isSorted=False
+  def add (self, v, nums): 
+      if v!="?":
+          self.n += 1
+          if self.lo > v:  
+              self.lo=v
+          if self.hi < v: 
+              self.hi=v
+          if len(self._has) < nums: 
+              pos=len(self._has)
+          elif random.uniform(0, 1) < nums/self.n:
+              pos=random.randint(0, len(self._has) - 1)               
+          if 'pos' in locals(): 
+              self.isSorted=False
+              if pos < len(self._has):
+                  self._has[pos]=float(v) 
+              else:
+                  self._has.insert(pos, float(v)) 
+          return
         
   def div(self):
     a=self.nums()
