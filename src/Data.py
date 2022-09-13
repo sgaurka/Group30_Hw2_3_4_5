@@ -13,7 +13,15 @@ class Data:
     def add(self, xs):
         if len(self.cols) == 0:
             self.cols = Col(xs)
-        # TODO: else
+        else:
+            try:
+                self.rows.append(xs.cells)
+            except:
+                self.rows.append(Row(xs))
+            row=self.rows
+            for todo in self.cols.x+self.cols.y:
+                for col in todo:
+                    col.add(row.cells[col.at])
             
      
 if __name__ == '__main__':
