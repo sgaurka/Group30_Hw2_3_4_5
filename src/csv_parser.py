@@ -48,6 +48,14 @@ def cli(t, args):
     print(t, args)
     for slot,v in t.items():
         print (slot, v)
+# creates a non mutable copy of a dictionary
+def copy(t):
+    if type(t)!=dict:
+        return t
+    u ={}
+    for key, value in t.items():
+        u[key] = copy(value)
+    return u
     
 # Create a 'the' variable
 def createDefaultTheFromHelp():
