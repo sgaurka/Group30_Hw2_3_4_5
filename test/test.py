@@ -4,6 +4,9 @@ sys.path.append('src')
 from csv_parser import the
 from numeric import Num
 from Sym import Sym
+from Data import Data
+from Row import Row
+from Col import Col
 
 ## Test Engine
 eg, fails = {}, 0
@@ -88,7 +91,7 @@ def eg_bignum():
 def eg_csv():
         n=0
         csv= Data("../data/source.csv")
-        row()
+        Row()
         n = n+1
         if n>10:
             return
