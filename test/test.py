@@ -37,23 +37,20 @@ def runs(k,old,status,out,msg):
     print("!!!!!!", msg, k , status)
     return out
 
-def test_the():
+def eg_the():
     print(the)
 
 ## The middle and diversity of a set of symbols is called "mode" 
 ## and "entropy" (and the latter is zero when all the symbols 
 ## are the same).
-def test_sym():
+def eg_sym():
     sym = Sym(0,"")
     for x in ["a","a","a","a","b","b","c"]:
         sym.add(x)
     mode, entropy = sym.mid(), sym.div()
-    #entropy is complex, so take real number part only
     entropy = (1000*entropy.real)//1/1000
-    # print output: oo({mid=mode, div=entropy})
     print('mid: {}, div: {}'.format(mode, entropy))
     
-    # assert mode=="b" and 1.37 <= entropy and entropy <= 1.38
     if not (mode=="a" and 1.37 <= entropy and entropy <= 1.38):
         raise AssertionError()
     else:
@@ -63,7 +60,7 @@ def test_sym():
 ## The middle and diversity of a set of numbers is called "median" 
 ## and "standard deviation" (and the latter is zero when all the nums 
 ## are the same).
-def test_num():
+def eg_num():
     print('\n-----------------------------------')
     num = Num(0,"")
     for i in range(1,100):
@@ -78,7 +75,7 @@ def test_num():
 
 ## Nums store only a sample of the numbers added to it (and that storage 
 ## is done such that the kept numbers span the range of inputs).
-def test_bignum():
+def eg_bignum():
     print('\n-----------------------------------')
     num=Num(0, '')
     for x in range(1, 1000):
@@ -86,10 +83,45 @@ def test_bignum():
     num._has.sort()
     print(num._has)
     print('Passed? =', len(num._has) == 32)
+    
+## Show we can read csv files.
+def eg_csv():
+        n=0
+        csv= Data("../data/source.csv")
+        row()
+        n = n+1
+        if n>10:
+            return
+        else:
+            Num.print_Csv() 
+        
+## Can I load a csv file into a Data?.
+def eg_data(data):
+    d = Data("../data/source.csv")
+    print('-----------------------------------')
+    for c in d.col.y:
+        print(d.data(c))
+    assert True
+
+## Print some stats on columns.
+def eg_stats():
+    data = Data("../data/source.csv")
+    div = Col.div()
+    mid = Col.mid()
+    print('-----------------------------------')
+    print(data.stats(2,data.col.x,"mid"))
+    print(data.stats(3,data.col.x,"div"))
+    print(data.stats(2,data.col.y,"mid"))
+    print(data.stats(3,data.col.y,"div"))
+    assert True
+
 
 if __name__ == "__main__":
-    test_the()
-    test_num()
-    test_sym()
-    test_bignum()
+    eg_the()
+    eg_num()
+    eg_sym()
+    eg_bignum()
+    eg_csv()
+    eg_data()
+    eg_stats()
     
