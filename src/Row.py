@@ -11,4 +11,7 @@ class Row:
             self.cells = t
         self.cooked = copy(t)
         self.isEvaled = false
+       
+    if __name__ == '__main__':
+        row = Row(t={2:3,4:5})
         
