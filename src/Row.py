@@ -1,6 +1,5 @@
 import math
-import copy from csv_parser
-
+from csv_parser import copy 
 
 class Row:
     cells = {}
