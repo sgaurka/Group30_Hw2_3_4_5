@@ -56,7 +56,12 @@ def copy(t):
     for key, value in t.items():
         u[key] = copy(value)
     return u
-    
+   
+ # Push function
+ def push(t, x):
+  t.append(x)
+  return x
+  
 # Create a 'the' variable
 def createDefaultTheFromHelp():
     regex = re.compile(r'\s-([A-Za-z])+\s+--(\w+)\s+.+[\s]+=\s(.+)')
