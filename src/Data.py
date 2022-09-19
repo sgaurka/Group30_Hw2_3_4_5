@@ -1,4 +1,5 @@
 from csv_parser import csv
+from Cols import Cols
 
 class Data:
     
