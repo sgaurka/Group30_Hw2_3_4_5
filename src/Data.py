@@ -1,5 +1,6 @@
 from csv_parser import csv
 from Cols import Cols
+from Row import Row
 
 class Data:
     
