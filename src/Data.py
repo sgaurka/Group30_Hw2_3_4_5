@@ -12,7 +12,7 @@ class Data:
        
     def add(self, xs):
         if len(self.cols) == 0:
-            self.cols = Col(xs)
+            self.cols = Cols(xs)
         else:
             try:
                 self.rows.append(xs.cells)
