@@ -24,5 +24,5 @@ class Cols:
             self.klass=col
 
 if __name__ == '__main__':
-    cols = Cols(Clndrs,Volume,Hp:,Lbs-,Acc+,Model,origin,Mpg+)
+    cols = Cols('Clndrs','Volume','Hp:','Lbs-','Acc+','Model','origin','Mpg+')
   
