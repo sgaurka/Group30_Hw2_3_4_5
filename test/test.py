@@ -6,7 +6,7 @@ from numeric import Num
 from Sym import Sym
 from Data import Data
 from Row import Row
-from Col import Col
+from Cols import Cols
 
 ## Test Engine
 eg, fails = {}, 0
