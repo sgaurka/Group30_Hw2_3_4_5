@@ -36,7 +36,7 @@ def runs(k,old,status,out,msg):
     for j in old:
         the[num] = j
         num = num + 1
-    msg = status and ((out == TRUE and "PASS") or "FAIL") or "CRASH"
+    msg = status and ((out == True and "PASS") or "FAIL") or "CRASH"
     print("!!!!!!", msg, k , status)
     return out
 
