@@ -109,8 +109,8 @@ def eg_data(data):
 ## Print some stats on columns.
 def eg_stats():
     data = Data("../data/source.csv")
-    div = Col.div()
-    mid = Col.mid()
+    div = Cols.div()
+    mid = Cols.mid()
     print('-----------------------------------')
     print(data.stats(2,data.col.x,"mid"))
     print(data.stats(3,data.col.x,"div"))
