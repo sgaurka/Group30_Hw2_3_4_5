@@ -57,8 +57,8 @@ def copy(t):
         u[key] = copy(value)
     return u
    
- # Push function
- def push(t, x):
+# Push function
+def push(t, x):
   t.append(x)
   return x
   
