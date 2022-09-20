@@ -1,7 +1,7 @@
 import random
 import sys
 sys.path.append('src')
-from csv_parser import the
+from csv_parser import the, csv
 from numeric import Num
 from Sym import Sym
 from Data import Data
@@ -41,7 +41,12 @@ def runs(k,old,status,out,msg):
     return out
 
 def eg_the():
-    print(the)
+    if the:
+        print('\n', the)
+        return True
+    else:
+        print('the does not exist')
+        return False
 
 ## The middle and diversity of a set of symbols is called "mode" 
 ## and "entropy" (and the latter is zero when all the symbols 
@@ -89,14 +94,12 @@ def eg_bignum():
     
 ## Show we can read csv files.
 def eg_csv():
-        n=0
-        csv= Data("../data/source.csv")
-        Row()
-        n = n+1
-        if n>10:
-            return
-        else:
-            Num.print_Csv() 
+    n = 0
+    while n < 10:
+        csv("./data/auto93.csv", Row)
+        n += 1
+        print(Row)
+    return True 
         
 ## Can I load a csv file into a Data?.
 def eg_data(data):
@@ -117,6 +120,7 @@ def eg_stats():
     print(data.stats(2,data.col.y,"mid"))
     print(data.stats(3,data.col.y,"div"))
     assert True
+
 
 
 if __name__ == "__main__":
