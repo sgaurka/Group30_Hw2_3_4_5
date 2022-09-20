@@ -25,8 +25,12 @@ class Data:
                 for col in todo:
                     col.add(row.cells[col.at])
      
-    def stats(self, places, showCols=self.cols.y, fun="mid"):
+    def stats(self, places, showCols, fun):
         t={}
+        if showCols==None:
+            showCols=self.cols.y
+        if fun==None:
+            fun="mid"
         for col in showCols:
             v=fun(col)
             if type(v)==int or type(v)==float:
