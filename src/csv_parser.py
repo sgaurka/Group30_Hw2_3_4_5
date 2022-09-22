@@ -2,7 +2,6 @@ import re
 import sys
 
 the = {}
-separator = ','
 help='''
 CSV : summarized csv file
 (c) 2022 Tim Menzies <timm@ieee.org> BSD-2 license
@@ -45,9 +44,10 @@ def coerce(s):
 # Work In Progress: 
 # Update settings from values on command-line flags. Booleans need no values (we just flip the defeaults).
 def cli(t, args):
-    print(t, args)
-    for slot,v in t.items():
-        print (slot, v)
+    # for slot,v in t.items():
+    #     print (slot, v)
+        
+    return t
 # creates a non mutable copy of a dictionary
 def copy(t):
     if type(t)!=dict:
@@ -72,18 +72,20 @@ def createDefaultTheFromHelp():
             _, k, x = res.groups()
             the[k] = coerce(x.strip())
 
+createDefaultTheFromHelp()
+
 # Read CSV file
 def csv(filename, fun):
     with open(filename, 'r') as csv_file:
         lines = csv_file.readlines()
         t = {} 
-        for line in lines:
-            arr = line.strip().split(the.separator)
-            t[1 + len(t)] = coerce(arr)
+        # for line in lines:
+        arr = lines[0].strip().split(the['seperator'])
+        for a in arr:
+            t[1 + len(t)] = coerce(a)
         fun(t)
     csv_file.close()
     
 if __name__ == '__main__':
     args = sys.argv
-    createDefaultTheFromHelp()
     the = cli(the, args)
