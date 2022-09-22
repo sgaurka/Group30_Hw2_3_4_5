@@ -1,3 +1,5 @@
+from Cols import Cols
+from Row import Row
 from csv_parser import csv
 from Cols import Cols
 from Row import Row
@@ -8,12 +10,17 @@ class Data:
         self.src = src
         self.cols = None
         self.rows = {}
+        self.create()
         
     def create(self):
-       csv(self.src, self.add)
+        if (type(self.src) == str):
+            csv(self.src, self.add)
+        else:
+            for _, row in enumerate(self.src or {}):
+                self.add(row)
        
     def add(self, xs):
-        if len(self.cols) == 0:
+        if not self.cols:
             self.cols = Cols(xs)
         else:
             try:
@@ -41,5 +48,6 @@ class Data:
      
 if __name__ == '__main__':
     data = Data("./../data/auto93.csv")
-    print(data)
+    print(data.rows)
+    print(data.cols)
         

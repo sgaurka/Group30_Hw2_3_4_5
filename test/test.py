@@ -1,7 +1,7 @@
 import random
 import sys
 sys.path.append('src')
-from csv_parser import the, csv
+from csv_parser import cli, the, csv
 from numeric import Num
 from Sym import Sym
 from Data import Data
@@ -15,30 +15,36 @@ eg, fails = {}, 0
 ## 3. ... restore them after the test
 ## 4. Print error messages or stack dumps as required.
 ## 5. Return true if this all went well.
-def runs(k,old,status,out,msg):
-    the = Num.the
-    if not eg[k]:
+def runs(k):
+    if not eg.get(k):
         return
-    random.seed(the.seed)
+    random.seed(the['seed'])
     old ={}
     num = 0
     for i in the:
         old[num] = i
         num = num + 1
-    if the.dump:
-        status,out = True, eg[k]
+    if the['dump']:
+        status,out = True, eg[k]()
     else:
         try:
-            status,out = True, eg[k]
+            status,out = True, eg[k]()
         except:
-            out = "Exception thrown. eg does not exist."
-    num = 0
-    for j in old:
-        the[num] = j
-        num = num + 1
+            status, out = False, False
+    for i, v in enumerate(old):
+        the[i] = v
     msg = status and ((out == True and "PASS") or "FAIL") or "CRASH"
+    # print(status, out, k, msg, out)
     print("!!!!!!", msg, k , status)
     return out
+
+def run_all_tests():
+    fails = 0
+    for _, value in enumerate(eg):
+        print("\n-----------------------------------")
+        if not runs(value):
+            fails = fails + 1
+        print("Fails: ", fails)
 
 def eg_the():
     if the:
@@ -47,6 +53,7 @@ def eg_the():
     else:
         print('the does not exist')
         return False
+eg['the'] = eg_the
 
 ## The middle and diversity of a set of symbols is called "mode" 
 ## and "entropy" (and the latter is zero when all the symbols 
@@ -59,76 +66,67 @@ def eg_sym():
     entropy = (1000*entropy.real)//1/1000
     print('mid: {}, div: {}'.format(mode, entropy))
     
-    if not (mode=="a" and 1.37 <= entropy and entropy <= 1.38):
-        raise AssertionError()
-    else:
-        print("Sym test passed")
-
+    print(mode, entropy)
+    return mode == "a" and 1.37 <= entropy and entropy <= 1.38   
+eg['sym'] = eg_sym
 
 ## The middle and diversity of a set of numbers is called "median" 
 ## and "standard deviation" (and the latter is zero when all the nums 
 ## are the same).
 def eg_num():
-    print('\n-----------------------------------')
     num = Num(0,"")
     for i in range(1,100):
         num.add(i,float('inf'))
     mid = num.mid()
     div = num.div()
     print('mid: {}, div: {}'.format(mid, div))
-    if not (mid >= 50 and mid <= 52 and div > 30.5 and div <32):
-        raise AssertionError()
-    else:
-        print("Num test passed")
+    return mid >= 50 and mid <= 52 and div > 30.5 and div < 32
+eg['num'] = eg_num
 
 ## Nums store only a sample of the numbers added to it (and that storage 
 ## is done such that the kept numbers span the range of inputs).
 def eg_bignum():
-    print('\n-----------------------------------')
     num=Num(0, '')
     for x in range(1, 1000):
         num.add(x, 32)
     num._has.sort()
     print(num._has)
-    print('Passed? =', len(num._has) == 32)
-    
+    return len(num._has) == 32
+eg['bignum'] = eg_bignum
+
 ## Show we can read csv files.
 def eg_csv():
     n = 0
-    while n < 10:
-        csv("./data/auto93.csv", Row)
+    if n < 10:
+        csv("./data/auto93.csv", print)
         n += 1
-        print(Row)
-    return True 
+    return True
+eg['csv'] = eg_csv
         
 ## Can I load a csv file into a Data?.
-def eg_data(data):
-    d = Data("../data/source.csv")
-    print('-----------------------------------')
-    for c in d.col.y:
-        print(d.data(c))
-    assert True
+def eg_data():
+    d = Data("./data/auto93.csv")
+    for _, col in enumerate(d.cols.y):
+        print(col)
+    return True
+eg['data'] = eg_data
 
 ## Print some stats on columns.
 def eg_stats():
-    data = Data("../data/source.csv")
-    div = Cols.div()
-    mid = Cols.mid()
+    data = Data("./data/auto93.csv")
+    div = lambda col: col.div
+    mid = lambda col: col.mid
     print('-----------------------------------')
-    print(data.stats(2,data.col.x,"mid"))
-    print(data.stats(3,data.col.x,"div"))
-    print(data.stats(2,data.col.y,"mid"))
-    print(data.stats(3,data.col.y,"div"))
-    assert True
-
+    print("xmid", data.stats(2,data.cols.x, mid))
+    print("xdiv", data.stats(3,data.cols.x, div))
+    print("ymid", data.stats(2,data.cols.y, mid))
+    print("ydiv", data.stats(3,data.cols.y, div))
+    return True
+eg['stats'] = eg_stats
 
 
 if __name__ == "__main__":
-    eg_the()
-    eg_num()
-    eg_sym()
-    eg_bignum()
-    eg_csv()
-    eg_data()
-    eg_stats()
+    args = sys.argv
+    the = cli(the, args)
+    run_all_tests()
     
