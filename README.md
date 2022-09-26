@@ -7,6 +7,9 @@
 <img src="https://img.shields.io/github/contributors/swarangigaurkar/Group30_Hw2_3_4_5?style=plastic"/> </a>
 [![Python application](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/actions/workflows/python-app.yml/badge.svg?style=plastic?branch=main)](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/actions/workflows/python-app.yml)
 [![DOI](https://zenodo.org/badge/532051492.svg?style=plastic)](https://zenodo.org/badge/latestdoi/532051492)
+[![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
+
+
 
 The assignment is to rewrite LUA code that will read a CSV file and produce summaries of the columns (medians and standard deviation for numeric columns; mode and entropy for symbolic columns) in any preferred language. We have completed this assignment for the following classes:
 1. Num 
