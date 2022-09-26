@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/github/license/swarangigaurkar/group30_Hw2_3_4_5?style=plastic" /></a>
 <a href="https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/graphs/contributors" alt="Contributors">
 <img src="https://img.shields.io/github/contributors/swarangigaurkar/Group30_Hw2_3_4_5?style=plastic"/> </a>
+[![DOI](https://zenodo.org/badge/532051492.svg?style=plastic)](https://zenodo.org/badge/latestdoi/532051492)
 
 The assignment is to rewrite LUA code that will read a CSV file and produce summaries of the columns (medians and standard deviation for numeric columns; mode and entropy for symbolic columns) in any preferred language. We have completed this assignment for the Num and Sym class as well as the test cases for the Sym, Num, and Bignum.
 
