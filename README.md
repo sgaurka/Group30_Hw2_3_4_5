@@ -9,7 +9,7 @@
 [![DOI](https://zenodo.org/badge/532051492.svg?style=plastic)](https://zenodo.org/badge/latestdoi/532051492)
 
 The assignment is to rewrite LUA code that will read a CSV file and produce summaries of the columns (medians and standard deviation for numeric columns; mode and entropy for symbolic columns) in any preferred language. We have completed this assignment for the following classes:
-1. Num
+1. Num 
 2. Sym 
 3. Cols
 4. Row
@@ -28,7 +28,7 @@ This code has been updated by our team in Python.
 
 ## Resources
 
-Example implementation: source code in Lua
+Example implementation: [Source Code in LUA](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf)
 
 
 ## Authors :
