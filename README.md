@@ -9,6 +9,7 @@
 [![DOI](https://zenodo.org/badge/532051492.svg?style=plastic)](https://zenodo.org/badge/latestdoi/532051492)
 ![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
 ![Repo Size](https://img.shields.io/github/repo-size/Swarangigaurkar/Group30_Hw2_3_4_5)
+![GitHub Release](https://img.shields.io/github/release/Swarangigaurkar/Group30_Hw2_3_4_5)(https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/releases))
 
 
 
