@@ -22,9 +22,9 @@
 |Test cases exist|3|https://github.com/Lamonkey/csc510_hw/tree/main/test|
 |Test cases are routinely executed|3|github action https://github.com/Lamonkey/csc510_hw/actions|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|https://github.com/Lamonkey/csc510_hw/blob/main/CONTRIBUTING.md|
-|Issues are discussed before they are closed|even if you discuss in slack, need a sumamry statement here|2|Some issues are closed without comments. https://github.com/Lamonkey/csc510_hw/issues?page=2&q=is%3Aissue+is%3Aclosed|
-|Chat channel: exists|Link or screenshots|N/A|N/A|
-|Test cases: a large proportion of the issues related to handling failing cases.|If a test case fails, open an issue and fix it|3| I can see some issues related to handling failing cases or bug. https://github.com/Lamonkey/csc510_hw/issues|
+|Issues are discussed before they are closed|2|Some issues are closed without comments. https://github.com/Lamonkey/csc510_hw/issues?page=2&q=is%3Aissue+is%3Aclosed|
+|Chat channel: exists|N/A|N/A|
+|Test cases: a large proportion of the issues related to handling failing cases.|3| I can see some issues related to handling failing cases or bug. https://github.com/Lamonkey/csc510_hw/issues|
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|3| Everyone is using the same tools|
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3|There is a requirement file. https://github.com/Lamonkey/csc510_hw/blob/main/requirements.txt|
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|https://github.com/Lamonkey/csc510_hw/blob/main/requirements.txt|
