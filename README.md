@@ -30,8 +30,12 @@ This code has been updated by our team in Python.
 
 Example implementation: [Source Code in LUA](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf)
 
+## Output 
 
-## Authors :
+<img width="1127" alt="Screen Shot 2022-09-26 at 11 32 36 AM" src="https://user-images.githubusercontent.com/112131763/192319969-40eb6a46-b59e-409f-9d53-486c2f7f4f5d.png">
+
+
+## Authors 
 
 1. [Kritika Javali](https://github.com/ksjavali)
 2. [Swarangi Gaurkar](https://github.com/Swarangigaurkar)
@@ -45,5 +49,5 @@ Example implementation: [Source Code in LUA](https://github.com/txt/se22/blob/ma
 Contributions, issues, and feature requests are welcome!
 
 
-## License:
+## License
 [MIT](https://tldrlegal.com/license/mit-license)
