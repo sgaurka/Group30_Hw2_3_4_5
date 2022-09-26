@@ -1,4 +1,4 @@
-|Notes|Score(Total = ?)|Evidence|
+|Notes|Score = 61/72|Evidence|
 |-----|---------|------|
 |Video1|N/A|N/A| 
 |Video2|N/A|N/A| 
