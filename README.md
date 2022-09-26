@@ -8,8 +8,8 @@
 [![Python application](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/actions/workflows/python-app.yml/badge.svg?style=plastic?branch=main)](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/actions/workflows/python-app.yml)
 [![DOI](https://zenodo.org/badge/532051492.svg?style=plastic)](https://zenodo.org/badge/latestdoi/532051492)
 ![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
-![Repo Size](https://img.shields.io/github/repo-size/Swarangigaurkar/Group30_Hw2_3_4_5?style=plastic)
-![GitHub Release](https://img.shields.io/github/release/Swarangigaurkar/Group30_Hw2_3_4_5?style=plastic)(https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/releases)
+![Repo Size](https://img.shields.io/github/repo-size/Swarangigaurkar/Group30_Hw2_3_4_5?color=brightgreen)
+![GitHub Release](https://img.shields.io/github/release/Swarangigaurkar/Group30_Hw2_3_4_5?color=brightblue)
 
 
 
