@@ -59,6 +59,11 @@ To check whether the test caes are running fine, execute the following file. </b
 
 Contributions, issues, and feature requests are welcome!
 
+## Help
+
+Email any queries to the contributors -
+[Swarangi Gaurkar](sgaurka@ncsu.edu)
+
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
