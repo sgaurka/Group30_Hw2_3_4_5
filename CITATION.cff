@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If the code for this repository is used, please cite it as below"
+authors:
+- family-names: "Javali"
+  given-names: "Kritika"
+- family-names: "Gaurkar"
+  given-names: "Swarangi"
+- family-names: "Barreto"
+  given-names: "Aaron"
+- family-names: "Hsiang"
+  given-names: "Leo" 
+- family-names: "Babalola"
+  given-names: "Damilola" 
+title: "Group 30 - CSC 510 - Software Engineering - HW_2_3_4_5"
+version: 1.2
+doi: 10.5281/zenodo.7113667
+date-released: 2022-09-26
+url: "https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5"
