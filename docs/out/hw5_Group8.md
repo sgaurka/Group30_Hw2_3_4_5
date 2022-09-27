@@ -1,4 +1,4 @@
-# Repo: [https://github.com/Aoishi28/CSC510_Group8_HW2]
+# [Repository Group 8:](https://github.com/Aoishi28/CSC510_Group8_HW2)
 |Notes|Score = 53/72|Evidence|
 |-----|---------|------|
 |Video1|N/A|N/A| 
