@@ -1,6 +1,7 @@
 import math
 from csv_parser import copy 
 
+#Row class creates non mutable copies of values from a given dictionary
 class Row:
     cells = {}
     cooked = {}
