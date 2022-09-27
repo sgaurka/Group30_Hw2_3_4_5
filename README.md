@@ -13,27 +13,33 @@
 
 
 
-The assignment is to rewrite LUA code that will read a CSV file and produce summaries of the columns (medians and standard deviation for numeric columns; mode and entropy for symbolic columns) in any preferred language. We have completed this assignment for the following classes:
-1. Num 
-2. Sym 
-3. Cols
-4. Row
-5. Data
+The assignment is to rewrite LUA code that will read a CSV file and produce summaries of the columns (medians and standard deviation for numeric columns; mode and entropy for symbolic columns) in any preferred language. This assignment is done in Python for the following classes:
+1. [Num](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/src/numeric.py)  
+2. [Sym](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/src/Sym.py)  
+3. [Cols](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/src/Cols.py)  
+4. [Row](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/src/Row.py)  
+5. [Data](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/src/Data.py) 
 
-We have also written the following test cases:
-1. the
-2. sym
-3. num
-4. bignum
-5. csv
-6. data
-7. stats
-
-This code has been updated by our team in Python.
+The test cases for these classes are [here](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/blob/main/test/test.py).
 
 ## Resources
 
 Example implementation: [Source Code in LUA](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf)
+
+## Running the Code
+
+To run these files python version 3 and pytest version 5 should be installed.
+The command to check the correct python version. </br>
+```python --version```
+
+Run the following command to install all requirements. </br>
+```pip install -r requirements. txt```
+
+To view the results of tasks, execute the following file. </br>
+```python code/main.py```
+
+To check whether the test caes are running fine, execute the following file. </br>
+```pytest tests/test.py -v```
 
 ## Output 
 
