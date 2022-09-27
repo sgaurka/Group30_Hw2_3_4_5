@@ -48,6 +48,7 @@ def cli(t, args):
     #     print (slot, v)
         
     return t
+   
 # creates a non mutable copy of a dictionary
 def copy(t):
     if type(t)!=dict:
@@ -57,7 +58,7 @@ def copy(t):
         u[key] = copy(value)
     return u
    
-# Push function
+# Pushes new elements to the dictionary
 def push(t, x):
   t.append(x)
   return x
